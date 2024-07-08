@@ -16,7 +16,7 @@ const mono = IBM_Plex_Mono({
   subsets: ['latin'],
   weight: ['500', '700'],
 })
- 
+  
 const sans = Inter({
   variable: '--font-family-sans',
   subsets: ['latin'],
