@@ -7,8 +7,8 @@ import Header from '~/components/Header'
 import Welcome from '~/components/Welcome'
 import { readToken } from '~/lib/sanity.api'
 import { getClient } from '~/lib/sanity.client'
-import {getPosts, type Post, postsQuery } from '~/lib/sanity.queries'
-import {getMenu, type Menu, menuQuery } from '~/lib/sanity.queries'
+import { getPosts, type Post, postsQuery } from '~/lib/sanity.queries'
+import { getMenu, type Menu, menuQuery } from '~/lib/sanity.queries'
 import type { SharedPageProps } from '~/pages/_app'
 
 export const getStaticProps: GetStaticProps<
@@ -38,7 +38,7 @@ export default function IndexPage(
   const [menu] = useLiveQuery<Menu[]>(props.menu, menuQuery)
   return (
     <Container>
-      <Header menu={menu}/>
+      <Header menu={menu} />
       <section>
         {posts.length ? (
           posts.map((post) => <Card key={post._id} post={post} />)

@@ -1,10 +1,17 @@
-import Link from 'next/link'
+// components/Header.tsx
 import Menu from '~/components/Menu'
+import { Menu as MenuType } from '~/lib/sanity.queries'
 
-export default function Header({ menu }: { menu: Menu[] }) {
+type HeaderProps = {
+  menu: MenuType[]
+}
+
+const Header = ({ menu }: HeaderProps) => {
   return (
     <header className="header">
-      <Menu menu={menu} />
+      <Menu items={menu} />
     </header>
   )
 }
+
+export default Header
